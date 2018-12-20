@@ -199,11 +199,11 @@ AlignmentViewer.propTypes = {
     ]),
 
     /*
-    Whether to use most conserved ratio (MLE)
-    or normalized entropy to determine conservation,
-    which is ia value between 0 and 1 where 1 is most conserved.
+    Whether to use most conserved ratio (MLE) 'conservation'
+    or normalized entropy 'entropy' to determine conservation,
+    which is a value between 0 and 1 where 1 is most conserved.
     */
-    conservationmethod: PropTypes.string,
+    conservationmethod: PropTypes.oneOf(['conservation', 'opacity']),
 
     /*
     Whether to normalize the conservation barchart
@@ -258,8 +258,8 @@ AlignmentViewer.propTypes = {
     /*
     Sets how many pixels each nucleotide/amino acid on the Alignment Viewer
     takes up horizontally. The total number of tiles (numtiles) seen
-    horitontally is automatically determined by rounding
-    the Viewwer width divided by the tile witdth.
+    horizontally is automatically determined by rounding
+    the Viewer width divided by the tile width.
     */
     tilewidth: PropTypes.number,
 
@@ -273,10 +273,7 @@ AlignmentViewer.propTypes = {
     /*
     Toggles whether the overview should be a heatmap, a slider, or none.
     */
-    overview: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.string
-    ]),
+    overview: PropTypes.oneOf(['heatmap', 'slider', 'none']),
 
     /*
     Sets how many tiles to display across horitontally. If enabled,
@@ -286,11 +283,11 @@ AlignmentViewer.propTypes = {
     numtiles: PropTypes.number,
 
     /*
-    If overview is set to 'scroll', determines how many tiles to skip
+    If overview is set to 'slider', determines how many tiles to skip
     with each slider movement.
     Has no effect if scroll is not enabled (such as with overview or none).
     */
-    scroll: PropTypes.number,
+    scrollskip: PropTypes.number,
 
     /*
     Determines where to start annotating the first tile.
@@ -362,7 +359,7 @@ AlignmentViewer.defaultProps = {
     tileheight: 16,
     numtiles: null,
     overview: 'heatmap',
-    scroll: 10,
+    scrollskip: 10,
     tickstart: null,
     ticksteps: null,
     // Other
