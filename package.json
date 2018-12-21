@@ -1,7 +1,7 @@
 {
   "name": "react-alignment-viewer",
   "main": "lib/index.js",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "react-alignment-viewer",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
