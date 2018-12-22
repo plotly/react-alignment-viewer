@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { AlignmentChart, AlignmentViewer } from '../index';
 
-import dataset1 from '../../data/sample.fasta';
-import dataset2 from '../../data/p53.fasta';
-import dataset3 from '../../data/p53_clustalo.fasta';
-// import dataset4 from '../../data/p53_clustalo.clustal';
-import dataset4 from '../../data/1534023160.fasta';
+import dataset1 from '../data/sample.fasta';
+import dataset2 from '../data/p53.fasta';
+import dataset3 from '../data/p53_clustalo.fasta';
+// import dataset4 from '../data/p53_clustalo.clustal';
+import dataset4 from '../data/1534023160.fasta';
 
 
 const DATA = {
@@ -21,7 +21,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 'dataset1',
+            value: 'dataset3',
             events: []
         };
         this.setProps = this.setProps.bind(this);
@@ -76,7 +76,7 @@ export default class App extends Component {
                     <AlignmentViewer
                         data={DATA[value]}
                         extension='fasta'
-                        // onChange={this.handlePlotChange}
+                        onChange={this.handlePlotChange}
                     />
                 </div>
                 <div
@@ -96,6 +96,7 @@ export default class App extends Component {
                             fontSize: '14px'
                         }}
                         value={events.join('\n')}
+                        readOnly
                     >
                     </textarea>
                 </div>
