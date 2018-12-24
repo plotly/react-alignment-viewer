@@ -8,12 +8,12 @@ import { VISUALIZATION_OPTIONS, OVERVIEW_OPTIONS, COLORSCALE_OPTIONS } from './o
 
 
 /**
- * The alignment viewer/MSA component is used to align multiple genomic
+ * The Alignment Viewer (MSA) component is used to align multiple genomic
  * or proteomic sequences from a FASTA or Clustal file. Among its
  * extensive set of features, the multiple sequence alignment viewer
  * can display multiple subplots showing gap and conservation info,
  * alongside industry standard colorscale support and consensus sequence.
- * No matter what size your alignment is, aligment viewer is able to display
+ * No matter what size your alignment is, Aligment Viewer is able to display
  * your genes or proteins snappily thanks to the underlying WebGL architecture
  * powering the component. You can quickly scroll through your long sequence
  * with a slider or a heatmap overview.

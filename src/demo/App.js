@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { AlignmentChart, AlignmentViewer } from '../index';
 
-import dataset1 from '../data/sample.fasta';
-import dataset2 from '../data/p53.fasta';
-import dataset3 from '../data/p53_clustalo.fasta';
+import dataset1 from './data/sample.fasta';
+import dataset2 from './data/p53.fasta';
+import dataset3 from './data/p53_clustalo.fasta';
 // import dataset4 from '../data/p53_clustalo.clustal';
-import dataset4 from '../data/1534023160.fasta';
+import dataset4 from './data/1534023160.fasta';
 
 
 const DATA = {
@@ -38,7 +38,7 @@ export default class App extends Component {
     }
 
     handlePlotChange(event) {
-        let events = this.state.events;
+        const events = this.state.events;
         events.unshift(JSON.stringify(event));
         this.setState({events: events});
     }
