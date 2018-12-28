@@ -2,9 +2,9 @@
 
 MSA/Alignment viewer in React
 
-![alt text](https://github.com/plotly/dash-alignment-viewer/blob/master/assets/Picture1.png)
+![alt text](https://github.com/plotly/react-alignment-viewer/blob/master/assets/picture_1.png)
 
-![alt text](https://github.com/plotly/dash-alignment-viewer/blob/master/assets/Picture2.png)
+![alt text](https://github.com/plotly/react-alignment-viewer/blob/master/assets/picture_2.png)
 
 ## Getting started
 

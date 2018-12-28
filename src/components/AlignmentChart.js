@@ -37,7 +37,7 @@ export default class AlignmentChart extends PureComponent {
         };
 
         this.resetWindowing = this.resetWindowing.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChange = _.debounce(this.handleChange.bind(this), 250);
     }
 
     // Reset windowing to user preset on init or data change
@@ -77,30 +77,26 @@ export default class AlignmentChart extends PureComponent {
     }
 
     // Handle plot events
-    handleChange = _.debounce((event) => {
-
-        // Guard
+    handleChange(event) {
         if (!this.props.onChange) {
             return;
         }
+
         // CLick (mousedown) or hover (mousemove)
         if (event.points) {
-
             let eventType;
             if (event.event.type === "mousedown") {
                 eventType = 'Click';
-            }
-            else if (event.event.type === "mousemove") {
+            } else if (event.event.type === "mousemove") {
                 eventType = 'Hover';
-            }
-            else {
+            } else {
                 eventType = 'Other';
             }
 
             this.props.onChange({
                 eventType: eventType,
                 name: event.points[0].data.name,
-                // text: event.points[0].text,
+                text: event.points[0].text,
                 curveNumber: event.points[0].curveNumber,
                 x: event.points[0].x,
                 y: event.points[0].y,
@@ -132,7 +128,7 @@ export default class AlignmentChart extends PureComponent {
         else {
             this.props.onChange(event);
         }
-    }, 250);
+    };
 
     // Fetch data
     getData() {
@@ -420,11 +416,6 @@ export default class AlignmentChart extends PureComponent {
                 zeroline: false,
                 autorange: 'reversed',
                 automargin: true
-            },
-            yaxis2: {
-                showgrid: false,
-                zeroline: false,
-                domain: [0.75, 1]
             },
             margin: { t: 20, r: 20 },
         };
