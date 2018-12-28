@@ -1,20 +1,13 @@
 {
   "name": "react-alignment-viewer",
   "main": "lib/index.js",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "react-alignment-viewer",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
     "build-dev": "webpack --mode development",
     "build": "webpack --mode production",
     "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react",
-      "stage-2"
-    ]
   },
   "author": "Jack Luo",
   "license": "MIT",
