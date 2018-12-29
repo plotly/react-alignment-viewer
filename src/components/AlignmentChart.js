@@ -401,6 +401,7 @@ export default class AlignmentChart extends PureComponent {
         // Get layout
         const layout =  {
             hovermode: 'closest',
+            dragmode: 'pan',
             showlegend: false,
             xaxis: {
                 showgrid: false,
