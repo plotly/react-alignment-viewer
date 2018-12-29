@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AlignmentChart, AlignmentViewer } from '../index';
+import { AlignmentChart, AlignmentViewer } from '../src/index';
 
 import dataset1 from './data/sample.fasta';
 import dataset2 from './data/p53.fasta';
