@@ -1,7 +1,7 @@
 {
   "name": "react-alignment-viewer",
-  "main": "index.js",
-  "version": "0.5.3",
+  "main": "lib/index.js",
+  "version": "0.5.4",
   "description": "A React component to make interactive multiple sequence alignments/",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
