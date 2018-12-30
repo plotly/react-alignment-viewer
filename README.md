@@ -2,9 +2,14 @@
 
 MSA/Alignment viewer in React
 
-![alt text](https://github.com/plotly/react-alignment-viewer/blob/master/assets/picture_1.png)
+> A React component to interactively view multiple genomic or proteomic sequences.
 
-![alt text](https://github.com/plotly/react-alignment-viewer/blob/master/assets/picture_2.png)
+[![Build
+Status](https://travis-ci.org/plotly/react-alignment-viewer.svg?branch=master)](https://travis-ci.org/plotly/react-alignment-viewer)
+
+![](./assets/picture_1.png)
+
+![](./assets/picture_2.png)
 
 
 ## Getting started
@@ -14,13 +19,13 @@ MSA/Alignment viewer in React
 
 For [yarn](https://yarnpkg.com/en/) users, run:
 
-```sh
+```
 $ yarn add react-alignment-viewer
 ```
 
 For [npm](https://www.npmjs.com/) users, run:
 
-```sh
+```
 $ npm install react-alignment-viewer
 ```
 
