@@ -15,7 +15,7 @@ Before starting, you should read, agree to, and follow these three things:
 
 ### Report Bugs
 
-Report bugs at: https://github.com/plotly/react-oncoprint.js/issues/new.
+Report bugs at: https://github.com/plotly/react-alignment-viewer.js/issues/new.
 
 When reporting a bug, please include:
 
@@ -29,7 +29,7 @@ problem, and (hopefully) fix it.
 ### Submit Feedback
 
 The best way to send feedback is to [create a new
-issue](https://github.com/plotly/react-oncoprint.js/issues/new) on GitHub.
+issue](https://github.com/plotly/react-alignment-viewer.js/issues/new) on GitHub.
 
 If you are proposing a feature:
 
@@ -43,7 +43,7 @@ A plotly team member will take care of your issues.
 
 ### Participate
 
-Check out the [open bugs](https://github.com/plotly/react-oncoprint.js/issues) -
+Check out the [open bugs](https://github.com/plotly/react-alignment-viewer.js/issues) -
 anything tagged with the **[type: community]** label is left open for community
 input and Pull Requests.
 

@@ -29,13 +29,13 @@ $ npm install react-alignment-viewer
 
 ```js
 import React from 'react';
-import OncoPrint from 'react-alignment-viewer';
+import AlignmentViewer from 'react-alignment-viewer';
 import dataset from 'p3.fasta';  // assumes you have raw-loader
 
 class App extends React.Component {
   render() {
     return (
-      <OncoPrint data={dataset}/>
+      <AlignmentViewer data={dataset}/>
     );
   }
 }
@@ -50,7 +50,7 @@ class App extends React.Component {
 Get the code:
 
 ```
-$ git clone https://github.com/plotly/react-oncoprint
+$ git clone https://github.com/plotly/react-alignment-viewer
 ```
 
 Install the project `dev` dependencies:
@@ -95,5 +95,5 @@ agree to abide by its terms. See [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) file.
 
 ## License
 
-react-oncoprint is released under the MIT License. See the bundled
+react-alignment-viewer is released under the MIT License. See the bundled
 [LICENSE](LICENSE) file for details.

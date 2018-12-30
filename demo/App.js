@@ -54,7 +54,7 @@ export default class App extends Component {
                     background: "#F5F5F5"
                 }}
             >
-                <h1>dash-alignment-viewer Demo</h1>
+                <h1>react-alignment-viewer Demo</h1>
                 <div
                     style={{
                         padding: 16,
