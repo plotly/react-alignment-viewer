@@ -2,7 +2,7 @@
   "name": "react-alignment-viewer",
   "main": "lib/index.js",
   "version": "0.5.5",
-  "description": "A React component to make interactive multiple sequence alignments/",
+  "description": "A React component to make interactive multiple sequence alignments",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
     "build-dev": "webpack --mode development",
