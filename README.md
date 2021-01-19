@@ -34,7 +34,7 @@ $ npm install react-alignment-viewer
 
 ```js
 import React from 'react';
-import AlignmentViewer from 'react-alignment-viewer';
+import { AlignmentViewer } from 'react-alignment-viewer';
 import dataset from 'p3.fasta';  // assumes you have raw-loader
 
 class App extends React.Component {
