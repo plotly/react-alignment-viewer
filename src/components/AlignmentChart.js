@@ -152,11 +152,16 @@ export default class AlignmentChart extends PureComponent {
             gapcolorscale,
             gapopacity,
             groupbars,
-            showconsensus
+            showconsensus,
+            sequenceIds
         } = this.props;
 
         // Import sequence in FASTA/Clustal format
-        const sequences = importSequences(inputData, extension);
+        let sequences = importSequences(inputData, extension);
+
+        if (sequenceIds) {
+            sequences = sequences.filter((sequence) => sequenceIds.includes(sequence.id));
+        }
 
         // Fill sequence gaps if any
         const length = _.maxBy(sequences, (sequence => sequence.seq.length)).seq.length;
@@ -733,6 +738,10 @@ AlignmentChart.propTypes = {
         PropTypes.number,
         PropTypes.string
     ]),
+    /**
+     * Sequences ids to display
+     */
+    sequenceIds: PropTypes.array,
 };
 
 
@@ -767,5 +776,6 @@ AlignmentChart.defaultProps = {
     ticksteps: null,
     // Other
     width: null,
-    height: 900
+    height: 900,
+    sequenceIds: null,
 };
