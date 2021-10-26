@@ -33,7 +33,8 @@ export default class AlignmentChart extends PureComponent {
         super(props);
         this.state = {
             xStart: null,
-            xEnd: null
+            xEnd: null,
+            dragmode: null,
         };
 
         this.resetWindowing = this.resetWindowing.bind(this);
@@ -76,8 +77,26 @@ export default class AlignmentChart extends PureComponent {
         return { xStart: -0.5, xEnd: numtiles + 0.5 };
     }
 
+    handleSelect(event) {
+        const range = event.range || {};
+        const x = range.x;
+
+        if (!x) {
+            return;
+        }
+
+        this.setState({
+            xStart: x[0],
+            xEnd: x[1],
+        });
+    }
+
     // Handle plot events
     handleChange(event) {
+        // We need to save dragmode even if onChange is not defined
+        if (event.dragmode) {
+            this.setState({dragmode: event.dragmode});
+        }
         if (!this.props.onChange) {
             return;
         }
@@ -345,7 +364,7 @@ export default class AlignmentChart extends PureComponent {
             width: inputWidth,
             height: inputHeight,
         } = this.props;
-        const { xStart, xEnd } = this.state;
+        const { xStart, xEnd, dragmode } = this.state;
 
         // Initial width and range handled by constructor
         const initialRange = [xStart, xEnd];
@@ -406,7 +425,7 @@ export default class AlignmentChart extends PureComponent {
         // Get layout
         const layout =  {
             hovermode: 'closest',
-            dragmode: 'pan',
+            dragmode: dragmode || 'pan',
             showlegend: false,
             xaxis: {
                 showgrid: false,
@@ -511,6 +530,7 @@ export default class AlignmentChart extends PureComponent {
                     layout={layout}
                     onClick={this.handleChange}
                     onHover={this.handleChange}
+                    onSelected={this.handleSelect.bind(this)}
                     onRelayout={this.handleChange}
                     {...other}
                 />
